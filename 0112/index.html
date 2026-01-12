@@ -94,6 +94,45 @@
               <button class="btn" id="btnDel">삭제</button>
             </div>
           </div>
+          <fieldset class="battleField">
+  <legend>전투</legend>
+  <div class="inputItem">
+    <div class="text-wrapper">공격자</div>
+    <div class="div">
+      <select id="attackerSelect">
+        <option value="">-- 공격자 선택 --</option>
+        <option value="1">전사</option>
+        <option value="2">마법사</option>
+        <option value="3">궁수</option>
+        <option value="4">도적</option>
+      </select>
+    </div>
+  </div>
+  <div class="inputItem">
+    <div class="text-wrapper">공격 대상</div>
+    <div class="div">
+      <select id="defenderSelect">
+        <option value="">-- 공격 대상 선택 --</option>
+        <option value="1">전사</option>
+        <option value="2">마법사</option>
+        <option value="3">궁수</option>
+        <option value="4">도적</option>
+      </select>
+    </div>
+  </div>
+  <div class="inputButtons">
+    <div class="btn-wrapper">
+      <button class="btn" id="btnAttackStr">
+        물리 공격 (STR)
+      </button>
+    </div>
+    <div class="btn-wrapper">
+      <button class="btn" id="btnAttackInt">
+        마법 공격 (INT)
+      </button>
+    </div>
+  </div>
+</fieldset>
         </fieldset>
       </section>
       <section id="listSection">
