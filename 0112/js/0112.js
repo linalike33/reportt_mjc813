@@ -44,7 +44,7 @@ class RPGgame {
   PrintList() {
     $(".listDataBlock").empty();
     this.#gameList.forEach((item) => {
-      $(".istDataBlock").append(this.PrintRow(item));
+      $(".istDataBlock").append(this.inputItem(item));
     });
   }
 
@@ -70,7 +70,80 @@ class RPGgame {
     }
      return "-";
    }
-   PrintRow(item){
-    let html =''
+   inputItem(item){
+    let html = ` <input type="hidden" id="id" value="${item.id}" />
+          <div class="inputItem">
+            <div class="text-wrapper">${item.name}</div>
+            <div class="div">
+              <input type="text" id="name" class="inputText" maxlength="30" />
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">${this.printcls(item.cls)}</div>
+            <div class="div">
+              <select id="cls" class="selectCombo">
+                <option value="전사">전사</option>
+                <option value="마법사">마법사</option>
+                <option value="궁수">궁수</option>
+                <option value="도적">도적</option>
+              </select>
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">${this.printsx(item.sx)}</div>
+            <div class="div">
+              <select id="sx" class="selectCombo">
+                <option value="남자">남자</option>
+                <option value="여자">여자</option>
+              </select>
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">${item.hp}</div>
+            <div class="div">
+              <input type="number" id="hp" class="inputNumber" min="0" />
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">${item.mp}</div>
+            <div class="div">
+              <input type="number" id="mp" class="inputNumber" min="0" />
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">${item.str}</div>
+            <div class="div">
+              <input type="number" id="str" class="inputNumber" min="0" />
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">${item.int}</div>
+            <div class="div">
+              <input type="number" id="int" class="inputNumber" min="0" />
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">${item.dex}</div>
+            <div class="div">
+              <input type="number" id="dex" class="inputNumber" min="0" />
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">${item.lux}</div>
+            <div class="div">
+              <input type="number" id="lux" class="inputNumber" min="0" />
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">${item.birthDate}</div>
+            <div class="div">
+              <input type="date" id="birthDate" class="inputText" />
+            </div>
+          </div>`
+            return html;
+       
    }
+   
+
+
 }
